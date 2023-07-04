@@ -1,0 +1,27 @@
+{{>layout/header}}
+<h1>게시글 등록</h1>
+<!--md 뒤에 숫자는 화면을 12로 나눠서 얼마나 차지할거냐 하는(그리드 속성)-->
+<!--xs sm md lg는 화면 크기에 따라 세로로 표시 시작 여부 설정-->
+<div class="col-md-12">
+    <div class = "col-md-6">
+        <form>
+            <div class="form-group">
+                <label for="title">제목</label>
+                <input type = "text" class = "form-control" id = "title" placeholder="제목을 입력하세요">
+            </div>
+            <!--코드 보기 편하게 묶는 기능과 기본 margin 갖음-->
+            <div class="form-group">
+                <label for = "author">작성자</label>
+                <input type="text" class="form-control" id="author" placeholder="작성자를 입력하세요">
+            </div>
+            <div class="form-group">
+                <label for = "content">내용</label>
+                <textarea class="form-control" id="content" placeholder="내용을 입력하세요"></textarea>
+            </div>
+        </form>
+        <a href="/" role="button" class="btn btn-secondary">취소</a>
+        <button type="button" class="btn btn-primary" id="btn-save">등록</button>
+    </div>
+</div>
+{{>layout/footer}}
+<!--자바스크립트 등록해서 등록 취소 하기-->

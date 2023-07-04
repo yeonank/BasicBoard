@@ -1,0 +1,19 @@
+{{>layout/header}}
+<!--a href = "" role = "button" class = "btn btn-primary">로그아웃</a>
+<a href = "" role = "button" class = "btn btn-primary">회원탈퇴</a-->
+
+{{#userName}}
+    Logged in as: <span id="user">{{userName}}</span>
+    <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+{{/userName}}
+{{^userName}}<!--반대되는 조건에서만 출력-->
+    <a href = "/oauth2/authorization/kakao" role = "button" class = "btn btn-primary">카카오 로그인</a>
+{{/userName}}
+
+<br>
+
+<!--a href="/reservation/form" class="btn btn-outline-primary" role="button">예약</a>
+<a href="/reservation/list" class="btn btn-outline-secondary" role="button">예약 조회</a-->
+
+
+{{>layout/footer}}

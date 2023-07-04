@@ -1,0 +1,39 @@
+{{>layout/header}}
+<br>
+<table class="table table-horizontal table-bordered">
+    <thead class="thead-strong">
+    <tr>
+        <th>게시판번호</th>
+        <th>제목</th>
+        <th>작성자</th>
+        <th>최종수정일</th>
+    </tr>
+    </thead>
+    <tbody id="tbody">
+    {{#posts}}
+        <tr>
+            <td>{{id}}</td>
+            <td><a href="/posts/update/{{id}}">{{title}}</td></td>
+            <td>{{author}}</td>
+            <td>{{modifiedDate}}</td>
+        </tr>
+    {{/posts}}
+    </tbody>
+</table>
+
+<ul class="pagination" >
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">4</a></li>
+    <li class="page-item"><a class="page-link" href="#">5</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul>
+
+<a href="/board/form" role="button" class="btn btn-primary">글쓰기</a>
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="http://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
